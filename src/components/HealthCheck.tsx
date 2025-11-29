@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export function HealthCheck() {
   const [status, setStatus] = useState<'loading' | 'ok' | 'error'>('loading')

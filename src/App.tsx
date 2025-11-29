@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Logo } from './components/Logo'
 import { HealthCheck } from './components/HealthCheck'
 import { Hamburger } from './components/Hamburger'
