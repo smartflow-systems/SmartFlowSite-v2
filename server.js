@@ -1,6 +1,7 @@
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import rateLimit from 'express-rate-limit'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -8,6 +9,13 @@ const __dirname = path.dirname(__filename)
 const app = express()
 const PORT = process.env.PORT || 5000
 
+// Limit SPA fallback route to 100 requests per 15 min per IP
+const spaLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  standardHeaders: true, // Return rate limit info in headers
+  legacyHeaders: false, // Disable X-RateLimit headers
+})
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({
@@ -23,7 +31,7 @@ app.get('/health', (req, res) => {
 app.use(express.static(path.join(__dirname, 'dist')))
 
 // SPA fallback - serve index.html for all other routes
-app.get('*', (req, res) => {
+app.get('*', spaLimiter, (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
