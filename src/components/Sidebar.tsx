@@ -6,12 +6,12 @@ interface SidebarProps {
 }
 
 const navItems = [
-  { icon: '🏠', label: 'Dashboard', href: '#dashboard' },
-  { icon: '📊', label: 'Analytics', href: '#analytics' },
-  { icon: '🚀', label: 'Projects', href: '#projects' },
-  { icon: '⚙️', label: 'Settings', href: '#settings' },
-  { icon: '📖', label: 'Documentation', href: '#docs' },
-  { icon: '💬', label: 'Support', href: '#support' },
+  { icon: '🏠', label: 'Home', href: '#home' },
+  { icon: '🚀', label: 'Our Solutions', href: '#solutions' },
+  { icon: '💼', label: 'Services', href: '#services' },
+  { icon: '📊', label: 'Portfolio', href: '#portfolio' },
+  { icon: '💡', label: 'About Us', href: '#about' },
+  { icon: '📞', label: 'Contact', href: '#contact' },
 ]
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {

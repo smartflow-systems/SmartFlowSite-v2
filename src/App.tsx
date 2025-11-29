@@ -21,7 +21,7 @@ function App() {
               <div className="flex items-center gap-4">
                 <Hamburger isOpen={sidebarOpen} onClick={() => setSidebarOpen(!sidebarOpen)} />
                 <h1 className="text-xl font-bold text-sfs-gold hidden sm:block">
-                  SFS Genesis Template
+                  SmartFlow Systems
                 </h1>
               </div>
               <div className="flex items-center gap-4">
@@ -36,54 +36,91 @@ function App() {
         {/* Content Area */}
         <main className="container mx-auto px-4 py-16">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          <section id="home" className="text-center mb-16">
             <Logo />
             <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-sfs-gold via-sfs-beige to-sfs-gold bg-clip-text text-transparent text-glow">
-              SFS Genesis Template
+              SmartFlow Systems
             </h1>
-            <p className="text-xl text-sfs-beige/80 max-w-2xl mx-auto">
-              The Perfect Starting Point for SmartFlow Systems Apps
+            <p className="text-2xl text-sfs-beige/90 mb-4">
+              Enterprise SaaS Solutions & Digital Services
+            </p>
+            <p className="text-lg text-sfs-beige/70 max-w-3xl mx-auto">
+              Powering your business with cutting-edge AI, automation, and data intelligence.
+              26+ integrated solutions for modern enterprises.
             </p>
           </section>
 
-          {/* Features Grid - Glassmorphism Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            <div className="glass-card-hover p-6">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold text-sfs-gold mb-2">React 19</h3>
-              <p className="text-sfs-beige/70">Latest React with TypeScript 5 for maximum performance</p>
-            </div>
+          {/* Our Solutions */}
+          <section id="solutions" className="mb-16">
+            <h2 className="text-4xl font-bold text-center text-sfs-gold mb-12">Our Solutions</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="glass-card-hover p-6">
+                <div className="text-4xl mb-4">📊</div>
+                <h3 className="text-xl font-semibold text-sfs-gold mb-2">Data & Analytics</h3>
+                <p className="text-sfs-beige/70 mb-3">AI-powered data analysis, natural language SQL, and web scraping intelligence</p>
+                <ul className="text-sm text-sfs-beige/60 space-y-1">
+                  <li>• SFSDataQueryEngine</li>
+                  <li>• DataScrapeInsights</li>
+                  <li>• Analytics Engine</li>
+                </ul>
+              </div>
 
-            <div className="glass-card-hover p-6">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-semibold text-sfs-gold mb-2">SFS Theme</h3>
-              <p className="text-sfs-beige/70">Brown/Black/Gold with glassmorphism design</p>
-            </div>
+              <div className="glass-card-hover p-6">
+                <div className="text-4xl mb-4">📱</div>
+                <h3 className="text-xl font-semibold text-sfs-gold mb-2">Social Media</h3>
+                <p className="text-sfs-beige/70 mb-3">Multi-platform automation, AI content creation, and growth tools</p>
+                <ul className="text-sm text-sfs-beige/60 space-y-1">
+                  <li>• SocialScaleBooster</li>
+                  <li>• AI Social Bot Platform</li>
+                  <li>• Marketing Toolkit</li>
+                </ul>
+              </div>
 
-            <div className="glass-card-hover p-6">
-              <div className="text-4xl mb-4">💎</div>
-              <h3 className="text-xl font-semibold text-sfs-gold mb-2">Glassmorphism</h3>
-              <p className="text-sfs-beige/70">Modern glass cards with backdrop blur effects</p>
-            </div>
+              <div className="glass-card-hover p-6">
+                <div className="text-4xl mb-4">💼</div>
+                <h3 className="text-xl font-semibold text-sfs-gold mb-2">Business Management</h3>
+                <p className="text-sfs-beige/70 mb-3">CRM, booking systems, project management, and invoicing solutions</p>
+                <ul className="text-sm text-sfs-beige/60 space-y-1">
+                  <li>• Business Suite</li>
+                  <li>• Booking Platform</li>
+                  <li>• Invoice & Billing</li>
+                </ul>
+              </div>
 
-            <div className="glass-card-hover p-6">
-              <div className="text-4xl mb-4">🔌</div>
-              <h3 className="text-xl font-semibold text-sfs-gold mb-2">Circuit Flow</h3>
-              <p className="text-sfs-beige/70">Animated circuit background patterns</p>
-            </div>
+              <div className="glass-card-hover p-6">
+                <div className="text-4xl mb-4">🎨</div>
+                <h3 className="text-xl font-semibold text-sfs-gold mb-2">Design & Content</h3>
+                <p className="text-sfs-beige/70 mb-3">Video hosting, website builders, and content management systems</p>
+                <ul className="text-sm text-sfs-beige/60 space-y-1">
+                  <li>• Website Builder</li>
+                  <li>• Video Platform</li>
+                  <li>• Knowledge Base</li>
+                </ul>
+              </div>
 
-            <div className="glass-card-hover p-6">
-              <div className="text-4xl mb-4">🍔</div>
-              <h3 className="text-xl font-semibold text-sfs-gold mb-2">GitHub Layout</h3>
-              <p className="text-sfs-beige/70">Hamburger menu with sliding sidebar navigation</p>
-            </div>
+              <div className="glass-card-hover p-6">
+                <div className="text-4xl mb-4">🤖</div>
+                <h3 className="text-xl font-semibold text-sfs-gold mb-2">AI & Automation</h3>
+                <p className="text-sfs-beige/70 mb-3">Intelligent assistants, workflow automation, and AI-powered tools</p>
+                <ul className="text-sm text-sfs-beige/60 space-y-1">
+                  <li>• AI Companion Bot</li>
+                  <li>• Automation Workflows</li>
+                  <li>• Smart Integrations</li>
+                </ul>
+              </div>
 
-            <div className="glass-card-hover p-6">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-semibold text-sfs-gold mb-2">Ready to Deploy</h3>
-              <p className="text-sfs-beige/70">Replit & GitHub Actions configured</p>
+              <div className="glass-card-hover p-6">
+                <div className="text-4xl mb-4">🔧</div>
+                <h3 className="text-xl font-semibold text-sfs-gold mb-2">Developer Tools</h3>
+                <p className="text-sfs-beige/70 mb-3">SDKs, APIs, deployment tools, and infrastructure solutions</p>
+                <ul className="text-sm text-sfs-beige/60 space-y-1">
+                  <li>• Embed SDK</li>
+                  <li>• Deploy Hub</li>
+                  <li>• Core Services</li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </section>
 
           {/* Health Check */}
           <div className="max-w-md mx-auto mb-16">
@@ -91,19 +128,20 @@ function App() {
           </div>
 
           {/* CTA Section */}
-          <section className="glass-card p-12 text-center">
+          <section id="contact" className="glass-card p-12 text-center">
             <h2 className="text-3xl font-bold text-sfs-gold mb-4">
-              Ready to Build Something Amazing?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-sfs-beige/80 mb-8 max-w-2xl mx-auto">
-              Start with the perfect foundation. Clean code, modern design, and all the tools you need.
+              Join leading enterprises using SmartFlow Systems to automate, analyze, and accelerate growth.
+              Let's build something extraordinary together.
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <button className="sfs-button">
-                Get Started
+                Schedule Demo
               </button>
               <button className="sfs-button-outline">
-                View Documentation
+                View All Solutions
               </button>
             </div>
           </section>
